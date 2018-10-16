@@ -38,6 +38,19 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000000,
+              name: '[name].[hash].[ext]',
+              outputPath: 'assets/'
+            }
+          }
+        ]
+      }
     ]
   },
   resolve: {
