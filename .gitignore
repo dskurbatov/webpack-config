@@ -2,4 +2,7 @@
 node_modules/
 
 # ignore dist folder
- dist/
+dist/
+
+# ignore src folder
+src/
