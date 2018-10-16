@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const extractSCSS = new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css')
 
@@ -44,6 +45,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    extractSCSS
+    extractSCSS,
+    new HtmlWebpackPlugin({
+      title: 'Configuration for Webpack'
+    })
   ]
 }
