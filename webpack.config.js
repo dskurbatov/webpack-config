@@ -28,6 +28,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     extractSCSS
