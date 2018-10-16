@@ -1,6 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const extractSCSS = new ExtractTextPlugin('[name].[hash].css')
+const extractSCSS = new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css')
 
 module.exports = {
   entry: {
