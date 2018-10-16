@@ -6,3 +6,5 @@ dist/
 
 # ignore src folder
 src/
+
+.DS_Store

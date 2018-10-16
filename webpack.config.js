@@ -20,12 +20,23 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        //extract all css into one file
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
-      }
+      },
+      {
+        test: /\.(jpeg|jpg|png|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'assets/'
+            }
+          }
+        ]
+      },
     ]
   },
   resolve: {
